@@ -6,9 +6,9 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'components')); // Custom views folder
 
-app.get('/contact', (req, res) => {
-    const name = "Contact Us";
-    res.render('nav', {name : name})
+app.get('/', (req, res) => {
+    const item = ["apple" , "orange" , "Kiwi"]
+    res.render('nav', { item : item})
 })
 
 app.listen(port, () => {
