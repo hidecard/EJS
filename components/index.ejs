@@ -6,10 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello <%= username %></h1>
-    <form action="/" method="get">
-        <input type="text" name="username" placeholder="Enter username" id="">
-        <button type="submit">Submit</button>
-    </form>
+    <ul> 
+<% products.forEach(product => { %> 
+<li><%= product.name %> - $<%= product.price %></li> 
+<% }) %> 
+
+</ul>
 </body>
 </html>
