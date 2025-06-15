@@ -7,8 +7,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'components')); // Custom views folder
 
 app.get('/', (req, res) => {
-    const name = "Mg Mg";
-    res.render('nav', { name : name})
+   const username = req.query.username;
+   res.render('index', {username : username});
 })
 
 
